@@ -2,14 +2,15 @@ const IngredientList = ({ ingredients, addStack }) => {
   return (
     <div>
     <h2>Ingredients</h2>
-    <ul>
+    <ul className="list">
       {ingredients.map((ingredient, index) => (
         <li 
+          className="row"
           key={`${ingredient.name} - ${index}`} 
           style={{ backgroundColor: ingredient.color }}
         >
           {ingredient.name}
-          <button onClick={() => addStack(ingredient)}>Add</button>
+          <button className="add" onClick={() => addStack(ingredient)}>+</button>
         </li>
       ))}
       </ul>

@@ -35,18 +35,20 @@ const App = () => {
 
   return (
     <main>
-      <h1>Burger Stacker</h1>
-      <section>
-        <IngredientList 
-          ingredients={availableIngredients}
-          addStack={addStack} 
-        />
-        <BurgerStack
-          stack={stack}
-          clearStack={clearStack} 
-          removeStack={removeStack}  
-        />
-      </section>
+      <div className='card'>
+        <h1>Burger Stacker</h1>
+          <section className='columns'>
+            <IngredientList 
+              ingredients={availableIngredients}
+              addStack={addStack} 
+            />
+            <BurgerStack
+              stack={stack}
+              clearStack={clearStack} 
+              removeStack={removeStack}  
+            />
+          </section>
+      </div>
     </main>
   );
 };
